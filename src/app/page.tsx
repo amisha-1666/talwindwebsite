@@ -1,101 +1,166 @@
-import Image from "next/image";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      {/* Navbar */}
+      <Navbar />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      {/* Main Content */}
+      <main className="mt-16">
+        {/* Home Section */}
+        <section
+          id="home"
+          className="relative min-h-screen flex flex-col justify-center items-center bg-blue-400 text-center text-white"
+        >
+          <div className="relative z-10">
+            <h1 className="text-6xl font-bold">Welcome to Our Professional Site of Talwind CSS</h1>
+            <p className="mt-4 text-xl">Discover exceptional services and solutions</p>
+            <button className="mt-8 bg-gradient-to-r from-blue-500 to-purple-900 text-white py-3 px-6 rounded-lg text-lg hover:from-blue-600 hover:to-purple-600 transition duration-300">
+              Learn More
+            </button>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section
+          id="about"
+          className="min-h-screen flex flex-col lg:flex-row justify-center items-center bg-green-100 py-16"
+        >
+          <div className="w-full lg:w-1/2 p-8">
+            <h2 className="text-4xl font-bold text-gray-800">About Us</h2>
+            <p className="mt-4 text-lg text-gray-700">
+              We are a passionate team providing exceptional services that help businesses thrive.
+              With years of experience, we specialize in innovative solutions tailored to meet your unique needs.
+            </p>
+            <ul className="mt-6 space-y-4">
+              <li className="flex items-center">
+                <span className="text-blue-500 mr-4">✓</span>
+                Professional & Experienced Team
+              </li>
+              <li className="flex items-center">
+                <span className="text-blue-500 mr-4">✓</span>
+                Customized Solutions for Every Client
+              </li>
+              <li className="flex items-center">
+                <span className="text-blue-500 mr-4">✓</span>
+                Dedicated Customer Support
+              </li>
+            </ul>
+          </div>
+          <div className="w-full lg:w-1/2 p-8">
+            <h3 className="text-xl font-bold text-gray-800 mb-4">Our Vision</h3>
+            <p className="text-lg text-gray-700">
+              Our vision is to create a future where businesses can seamlessly integrate with modern technology to improve efficiency, reach, and sustainability.
+            </p>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section
+          id="team"
+          className="min-h-screen flex flex-col justify-center items-center bg-yellow-100 py-16"
+        >
+          <h2 className="text-4xl font-bold text-gray-800 mb-12">Our Team</h2>
+          <div className="flex space-x-8">
+            <div className="text-center">
+              <h3 className="text-xl font-bold">John Doe</h3>
+              <p className="text-gray-700">CEO & Founder</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-xl font-bold">Jane Smith</h3>
+              <p className="text-gray-700">Lead Developer</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-xl font-bold">Mike Johnson</h3>
+              <p className="text-gray-700">Project Manager</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="bg-gray-100 py-16">
+          <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Testimonials</h2>
+          <div className="flex justify-center space-x-8">
+            <div className="w-1/3 p-6 bg-white shadow-lg rounded-lg">
+              <p className="text-lg italic">"This company provided top-notch service. Highly recommend!"</p>
+              <p className="mt-4 text-right">– Sarah Lee</p>
+            </div>
+            <div className="w-1/3 p-6 bg-white shadow-lg rounded-lg">
+              <p className="text-lg italic">"Exceptional work from start to finish. Couldn't be happier."</p>
+              <p className="mt-4 text-right">– Tom Baker</p>
+            </div>
+            <div className="w-1/3 p-6 bg-white shadow-lg rounded-lg">
+              <p className="text-lg italic">"Professional, reliable, and great customer service!"</p>
+              <p className="mt-4 text-right">– Emily Davis</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section
+          id="contact"
+          className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-red-400 to-pink-300 p-8"
+        >
+          <h2 className="text-5xl font-bold text-white mb-8">Contact Us</h2>
+          <p className="text-xl text-white mb-8">
+            We would love to hear from you! Fill out the form below to get in touch.
+          </p>
+          <form className="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
+            <div className="mb-6">
+              <label
+                htmlFor="name"
+                className="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Your Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-500 focus:outline-none transition duration-300"
+              />
+            </div>
+            <div className="mb-6">
+              <label
+                htmlFor="email"
+                className="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Your Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-500 focus:outline-none transition duration-300"
+              />
+            </div>
+            <div className="mb-6">
+              <label
+                htmlFor="message"
+                className="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Your Message
+              </label>
+              <textarea
+                id="message"
+                placeholder="Write your message here"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md h-32 focus:ring-2 focus:ring-pink-500 focus:outline-none transition duration-300"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-2 px-4 rounded-lg hover:from-blue-600 hover:to-purple-600 transition duration-300"
+            >
+              Send Message
+            </button>
+          </form>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+      {/* Footer */}
+      <Footer />
+    </>
   );
 }
